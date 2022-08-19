@@ -1,0 +1,58 @@
+[2:12 PM] DIVIT SHAH
+Git add <file>
+- Stage all changes in <file> for the next commit.
+
+Git add <directory>
+- Stage all changes in <directory> for the next commit.
+
+To commit the changes we need to provide some message along.
+- Git commit -m “<message>”
+
+To add and commit as well we can use.
+- Git commit –am “<message>”
+
+When you commit, you must provide a comment
+(if you forget, Git will open a text editor so you can write one).
+
+Git status
+- List which files are staged, unstaged, and untracked.
+
+Be careful if you add to the staging area and then make more changes – The file can appear as both staged and
+unstaged. For now, we can use –am.
+
+Git diff
+- Show changes between commits, commit and working tree, etc.
+- This command compares your working directory with your staging area.
+- These are the changes that are not yet staged
+- If all the changes are committed, using diff command doesn’t show anything.
+
+To remove file from being tracked use:
+- git rm <filename>
+- This removes the file from being tracked. If you’ve already committed, the file is still in the database.
+
+Git log
+- Display’s the entire commit history using the default formatting.
+
+• git log -n <limit>    - git log -n 3 will display only 3 commits.
+• git log –oneline    - Condense each commit to a single line.
+• git log --author=“<pattern>”    - Search for commits by a particular author. The <pattern> argument can be a plain string or a regular expression.
+• git log --grep=“<pattern>”    - Search for commits with a commit message that matches <pattern>, which can be a plain string or a regular expression.
+• git log <since>..<until>    - Show only commits that occur between <since> and <until>.
+• git log <file>    - Only display commits that include the specified file. This is an easy way to see the history of a particular file.
+
+Git reset:    - Reset the staging area to match the most recent commit but leave the working directory unchanged.
+• Git reset <file>:    - Remove the specified file from the staging area but leave the working directory unchanged.
+
+• Rename:-
+> git branch -m old_branch new_branch
+
+• Delete :-
+> git checkout -b <branch> <sha>
+
+• Recover :-
+> git branch -d bug123
+
+➢ git stash → saves working dir to stash
+➢ git stash list → show all stash
+➢ git stash apply →reapply recent stash
+
